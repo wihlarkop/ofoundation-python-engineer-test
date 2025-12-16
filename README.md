@@ -37,6 +37,32 @@ The focus is on **architecture, clarity, and extensibility**, not feature comple
 
 * Python **3.11+**
 
+### Dependency Management
+
+This project can be run using **standard pip**, or optionally using **UV** (the tool used during development).
+
+**Option A: Using pip (most compatible)**
+
+```bash
+pip install -r requirements.txt
+```
+
+**Option B: Using UV (optional, faster local development)**
+
+UV is a fast Python package manager used during development of this project.
+
+Installation instructions:
+
+* [https://docs.astral.sh/uv/getting-started/installation/](https://docs.astral.sh/uv/getting-started/installation/)
+
+Once installed:
+
+```bash
+uv sync
+```
+
+---
+
 ### Installation & Run
 
 ```bash
@@ -46,9 +72,6 @@ cd ofoundation-python-engineer-test
 
 # Create environment file
 cp .env.example .env
-
-# Install dependencies
-pip install -r requirements.txt
 
 # Run the service
 uvicorn app.main:app --reload
@@ -213,6 +236,12 @@ This implementation is intentionally minimal and designed for extension:
 * Add monitoring and structured logging
 
 These are deliberately omitted to keep the focus on architecture and clarity.
+
+---
+
+## License
+
+MIT
 
 ---
 
